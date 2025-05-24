@@ -1,0 +1,338 @@
+@font-face {
+    font-family: Netflix;
+    src: url("../../font/AvenirNext.ttc");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Netflix;
+    src: url("../../font/Avenir.ttc");
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Netflix;
+    src: url("../../font/AvenirNextCondensed.ttc");
+    font-weight: 700;
+    font-style: normal;
+}
+
+.credits {
+    font-family: system-ui;
+    background: #212429;
+    font-size: 11px;
+    color: white;
+    padding: 0.5rem 0;
+    text-align: center;
+}
+.credits a {
+    color: #F865B0;
+    text-decoration: none;
+}
+* {
+    margin: 100;
+}
+body {
+    background: black;
+    color: white;
+    margin: 0;
+    font-family: Arial;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+.header {
+    padding: 15px;
+    position: relative;
+    z-index: 50;
+    height: -10vh;
+    background-image: linear-gradient(to bottom, black 0%, black 90%, transparent 100%);
+}
+.navegation-item {
+    list-style: none;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navegation {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-auto-columns: 100px;
+    grid-auto-flow: column;
+    justify-content: space-around;
+}
+.featured {
+    margin-top: -80px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+.featured-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40%;
+    background-image: linear-gradient(to top, black 0%, black 30%, transparent 100%);
+}
+.tags {
+    display: flex;
+    justify-content: center;
+    place-content: center;
+    height: 35vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%, -20%);
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+.tag {
+    display: flex;
+}
+
+.tag:before {
+    content: "·";
+    margin-right: 10px;
+    position: relative;
+    top: 2px;
+}
+
+.tag:first-child::before {
+    display: none;
+}
+
+.featured-actions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transform: translate(-110%, -20%);
+    padding-bottom: 1em;
+}
+
+.button {
+    
+    background: white;
+    display: flex;
+    align-items: center;
+    padding: 5px 1em 5px 1em;
+    border: none;
+    border-radius: 3px;
+}
+.icon-download::before {
+    background: white;
+    display: flex;
+    align-items: center;
+    padding: 5px 1em ;
+    border: none;
+    border-radius: 5px;
+    width: 50px; 
+    height: 50px; 
+}
+.button::before{
+    
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border: none;
+    margin-right: 10px;
+
+}
+.button-secondary {
+    background: transparent;
+    color: white;
+    font-size: 1.2em;
+    min-width: 100px;
+    flex-direction: column;
+    cursor: pointer;
+    border: none;
+    display: flex;            
+    flex-direction: column;      
+    justify-content: center;     
+    align-items: center;         
+    height: 8vh;              
+}
+
+.button-secondary::before {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin: auto;
+    margin-bottom: 5px;
+    border: none;
+}
+
+.icon-plus::before {
+    background: url("../../icons/plus.svg");
+}
+
+.icon-play::before {
+    background: url("../../icons/play.svg");
+}
+
+.icon-info::before {
+    background: url("../../icons/info.svg");
+}
+.icon-download::before {
+    background: url("../../icons/dowload.svg");
+}
+.list-content{
+ white-space: nowrap;
+    overflow-x:visible;
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    transition: transform 0.5 ease-in-out;
+}
+.list-item{
+    display: inline-block;
+    margin-left: 10px;
+}
+.list-item:first-child{
+    margin:0;
+}
+.list{
+    padding: 0 1em;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.footer{
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: black;
+    padding: 1em 2em 0;
+}
+.tab-list{
+    border: 1 px solid black;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    list-style: none;
+    color: #6e6e6e;
+    padding-bottom: 1em;
+}
+.tab-list a {
+    color: #F865B0;
+}
+.tab-item {
+    text-align: center;
+    font-size: 0.9em;
+}
+.tab-item svg{
+    display: block;
+    margin: auto;
+}
+.tab-item path{
+    fill: #6e6e6e;
+}
+.tab-item:hover :is(path, span){
+    fill:white;
+    color: white;
+}
+.info-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.icon-info {
+  font-size: 24px;
+  user-select: none;
+}
+
+ .button {
+    color: black; 
+    font-size: 16px; 
+}
+.icon {
+    width: 50px; 
+    height: 50px; 
+}
+.highlight{
+    font-size: 18px;
+    color: green;
+}
+.RD{
+    padding: 0 0 0 10px;
+    margin-top: -5px;
+}
+
+.button-p {
+  background: white;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  padding: 5px 150px 5px 150px;
+  border: none;
+  border-radius: 2px;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.button-p::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 30px;
+  margin-right: 5px;
+}
+
+.icon-plys::before {
+  background: url("../icons/plys.svg");
+}
+
+.button-r {
+  background: gray;
+  color: white;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  padding: 5px 146px 5px 130px;
+  border-radius: 3px;
+  gap: 10px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.button-r::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.icon-download::before {
+  background: url("../icons/download.svg");
+}
+.list-c{
+    white-space: nowrap;
+    overflow-x:auto;
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    transition: transform 0.5 ease-in-out;
+}
+.list-i{
+    display: inline-block;
+    margin-left: 10px;
+}
+.list-i:first-child{
+    margin:0;
+}
+.lst{
+    padding: 0 1em;
+}
